@@ -1,0 +1,200 @@
+
+
+/*header_elements*/
+header{
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+.mobile_show{
+  display: none;
+}
+.browser_panel{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  width: 100%;
+}
+.browser_panel__first_part{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--browser_panel__first_part_color);
+  width: 100%;
+  height: 36px;
+}
+.browser_panel__first_part__left_side{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-left: 10px;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.browser_panel__first_part__left_side__active_panel{
+ border-radius: 10px 10px 0 0;  
+ padding-right: 10px;
+ display: flex;
+ flex-direction: column;
+ height: 100%;
+ justify-content: center;
+ align-items: flex-end;
+ background-color: var(--browser_panel__active_panel);
+ width: 230px;
+}
+.browser_panel__first_part__left_side__active_panel svg{
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.browser_panel__first_part__left_side__active_panel path{
+  stroke: #A7A7A7;
+}
+.new_tab{
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+.new_tab path{
+  stroke: #6D6D6D;
+}
+.browser_panel__first_part__right_side{
+ display: flex;
+ flex-direction: row;
+ gap: 20px;
+ margin-right: 20px;
+ height: 100%;
+ justify-content: center;
+ align-items: center;
+}
+.browser_panel__first_part__right_side svg{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.browser_panel__second_part{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--browser_panel__active_panel);
+  width: 100%;
+  height: 36px;
+  align-items: center;
+  -webkit-box-shadow: 0px 1px 0px 0px rgba(232, 232, 232, 1);
+  -moz-box-shadow: 0px 1px 0px 0px rgba(232, 232, 232, 1);
+  box-shadow: 0px 1px 0px 0px rgba(232, 232, 232, 1);
+}
+.browser_panel__second_part__inside_content{
+  width: 98%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+.browser_panel__second_part__inside_content svg{
+  min-width: 20px;
+  cursor: pointer;
+  height: 20px;
+}
+.browser_panel__second_part__inside_content_center{
+  width: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
+  display: flex;
+  align-items: center;
+  height: 78%;
+  justify-content: space-between;
+  background-color: #F1F3F4;
+  border-radius: 20px;
+}
+.browser_panel__second_part__inside_content_center svg:first-child{
+  width: 12px;
+  height: 12px;
+}
+.browser_panel__second_part__inside_content_center svg{
+  width: 15px;
+  height: 15px;
+}
+.browser_panel__second_part__inside_content__right{
+  display: flex;
+  gap: 10px;
+  margin-right: 7px;
+}
+.browser_panel__second_part__inside_content__right svg {
+  width: 15px;
+  height: 15px;
+}
+
+.header_panel{
+  width: 100%;
+  padding-top: 25px;
+  z-index: 1;
+  padding-bottom: 25px;
+  background: rgb(105,102,167);
+  background: linear-gradient(90deg, rgba(105,102,167,1) 0%, rgba(76,76,164,1) 40%, rgba(125,138,200,1) 100%);
+  display: flex;
+  flex-direction: row;
+  font-size: 22px;
+  gap: 15px;
+  color: #333333;
+  align-items: center;
+  justify-content: center;
+}
+.header_panel__title{
+  color: #ffffff;
+}
+.header_panel_select{
+  outline: none;
+  padding: 5px;
+  border: 3px solid transparent;
+  border-radius: 5px;
+}
+/*header_elements_end*/
+
+/*media_Start*/
+
+
+@media (min-width:0px) and (max-width: 462px){
+  /*header_start*/
+  .browser_panel__first_part__left_side__active_panel{
+    width: 100px;
+  }
+  /*header_end*/
+  .payment_container form{
+    width: 90%;
+  }
+
+}
+
+@media (min-width:0px) and (max-width: 410px){
+  /*header_start*/
+  .mobile_show{
+   display: block;
+  }
+  .mobile_hidden, .browser_panel__first_part{
+    display: none;
+  }
+  .browser_panel__second_part__inside_content {
+    width: 93%;
+  }
+  .browser_panel__second_part{
+        -webkit-box-shadow: unset;
+    -moz-box-shadow: unset;
+    box-shadow: unset;
+  }
+  .browser_panel {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    -webkit-box-shadow: 0px 1px 0px 0px rgb(232 232 232);
+    -moz-box-shadow: 0px 1px 0px 0px rgba(232, 232, 232, 1);
+    box-shadow: 0px 1px 0px 0px rgb(232 232 232);
+  }
+
+}
+
